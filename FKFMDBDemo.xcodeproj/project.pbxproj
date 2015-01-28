@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1801AD01A775EA200FB9C08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801ACF1A775EA200FB9C08 /* main.m */; };
+		B1801AD31A775EA200FB9C08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AD21A775EA200FB9C08 /* AppDelegate.m */; };
+		B1801AD61A775EA200FB9C08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AD51A775EA200FB9C08 /* ViewController.m */; };
+		B1801AD91A775EA300FB9C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1801AD71A775EA300FB9C08 /* Main.storyboard */; };
+		B1801ADB1A775EA400FB9C08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1801ADA1A775EA400FB9C08 /* Images.xcassets */; };
+		B1801ADE1A775EA400FB9C08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1801ADC1A775EA400FB9C08 /* LaunchScreen.xib */; };
+		B1801AEA1A775EA500FB9C08 /* FKFMDBDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AE91A775EA500FB9C08 /* FKFMDBDemoTests.m */; };
+		B1801AFA1A775ED900FB9C08 /* FKFMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AF51A775ED900FB9C08 /* FKFMDatabase.m */; };
+		B1801AFB1A775ED900FB9C08 /* FKFMDBColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AF71A775ED900FB9C08 /* FKFMDBColumn.m */; };
+		B1801AFC1A775ED900FB9C08 /* FKFMDBCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AF91A775ED900FB9C08 /* FKFMDBCondition.m */; };
+		B1801B091A7760ED00FB9C08 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801AFF1A7760ED00FB9C08 /* FMDatabase.m */; };
+		B1801B0A1A7760ED00FB9C08 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801B011A7760ED00FB9C08 /* FMDatabaseAdditions.m */; };
+		B1801B0B1A7760ED00FB9C08 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801B031A7760ED00FB9C08 /* FMDatabasePool.m */; };
+		B1801B0C1A7760ED00FB9C08 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801B051A7760ED00FB9C08 /* FMDatabaseQueue.m */; };
+		B1801B0D1A7760ED00FB9C08 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B1801B081A7760ED00FB9C08 /* FMResultSet.m */; };
+		B1801B0F1A77611400FB9C08 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1801B0E1A77611400FB9C08 /* libsqlite3.0.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1801AE41A775EA500FB9C08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1801AC21A775EA000FB9C08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1801AC91A775EA100FB9C08;
+			remoteInfo = FKFMDBDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B1801ACA1A775EA100FB9C08 /* FKFMDBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKFMDBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1801ACE1A775EA100FB9C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1801ACF1A775EA200FB9C08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1801AD11A775EA200FB9C08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1801AD21A775EA200FB9C08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B1801AD41A775EA200FB9C08 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B1801AD51A775EA200FB9C08 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B1801AD81A775EA300FB9C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1801ADA1A775EA400FB9C08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B1801ADD1A775EA400FB9C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B1801AE31A775EA500FB9C08 /* FKFMDBDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FKFMDBDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1801AE81A775EA500FB9C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1801AE91A775EA500FB9C08 /* FKFMDBDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKFMDBDemoTests.m; sourceTree = "<group>"; };
+		B1801AF41A775ED900FB9C08 /* FKFMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFMDatabase.h; sourceTree = "<group>"; };
+		B1801AF51A775ED900FB9C08 /* FKFMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFMDatabase.m; sourceTree = "<group>"; };
+		B1801AF61A775ED900FB9C08 /* FKFMDBColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFMDBColumn.h; sourceTree = "<group>"; };
+		B1801AF71A775ED900FB9C08 /* FKFMDBColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFMDBColumn.m; sourceTree = "<group>"; };
+		B1801AF81A775ED900FB9C08 /* FKFMDBCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFMDBCondition.h; sourceTree = "<group>"; };
+		B1801AF91A775ED900FB9C08 /* FKFMDBCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFMDBCondition.m; sourceTree = "<group>"; };
+		B1801AFE1A7760ED00FB9C08 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		B1801AFF1A7760ED00FB9C08 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		B1801B001A7760ED00FB9C08 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B1801B011A7760ED00FB9C08 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B1801B021A7760ED00FB9C08 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		B1801B031A7760ED00FB9C08 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		B1801B041A7760ED00FB9C08 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B1801B051A7760ED00FB9C08 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B1801B061A7760ED00FB9C08 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		B1801B071A7760ED00FB9C08 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		B1801B081A7760ED00FB9C08 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		B1801B0E1A77611400FB9C08 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1801AC71A775EA100FB9C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1801B0F1A77611400FB9C08 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1801AE01A775EA500FB9C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1801AC11A775E9F00FB9C08 = {
+			isa = PBXGroup;
+			children = (
+				B1801B0E1A77611400FB9C08 /* libsqlite3.0.dylib */,
+				B1801AF31A775ED900FB9C08 /* FKFMDB */,
+				B1801ACC1A775EA100FB9C08 /* FKFMDBDemo */,
+				B1801AE61A775EA500FB9C08 /* FKFMDBDemoTests */,
+				B1801ACB1A775EA100FB9C08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1801ACB1A775EA100FB9C08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1801ACA1A775EA100FB9C08 /* FKFMDBDemo.app */,
+				B1801AE31A775EA500FB9C08 /* FKFMDBDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1801ACC1A775EA100FB9C08 /* FKFMDBDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B1801AD11A775EA200FB9C08 /* AppDelegate.h */,
+				B1801AD21A775EA200FB9C08 /* AppDelegate.m */,
+				B1801AD41A775EA200FB9C08 /* ViewController.h */,
+				B1801AD51A775EA200FB9C08 /* ViewController.m */,
+				B1801AD71A775EA300FB9C08 /* Main.storyboard */,
+				B1801ADA1A775EA400FB9C08 /* Images.xcassets */,
+				B1801ADC1A775EA400FB9C08 /* LaunchScreen.xib */,
+				B1801ACD1A775EA100FB9C08 /* Supporting Files */,
+			);
+			path = FKFMDBDemo;
+			sourceTree = "<group>";
+		};
+		B1801ACD1A775EA100FB9C08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1801ACE1A775EA100FB9C08 /* Info.plist */,
+				B1801ACF1A775EA200FB9C08 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1801AE61A775EA500FB9C08 /* FKFMDBDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1801AE91A775EA500FB9C08 /* FKFMDBDemoTests.m */,
+				B1801AE71A775EA500FB9C08 /* Supporting Files */,
+			);
+			path = FKFMDBDemoTests;
+			sourceTree = "<group>";
+		};
+		B1801AE71A775EA500FB9C08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1801AE81A775EA500FB9C08 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1801AF31A775ED900FB9C08 /* FKFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B1801AFD1A7760ED00FB9C08 /* fmdb */,
+				B1801AF41A775ED900FB9C08 /* FKFMDatabase.h */,
+				B1801AF51A775ED900FB9C08 /* FKFMDatabase.m */,
+				B1801AF61A775ED900FB9C08 /* FKFMDBColumn.h */,
+				B1801AF71A775ED900FB9C08 /* FKFMDBColumn.m */,
+				B1801AF81A775ED900FB9C08 /* FKFMDBCondition.h */,
+				B1801AF91A775ED900FB9C08 /* FKFMDBCondition.m */,
+			);
+			path = FKFMDB;
+			sourceTree = "<group>";
+		};
+		B1801AFD1A7760ED00FB9C08 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				B1801AFE1A7760ED00FB9C08 /* FMDatabase.h */,
+				B1801AFF1A7760ED00FB9C08 /* FMDatabase.m */,
+				B1801B001A7760ED00FB9C08 /* FMDatabaseAdditions.h */,
+				B1801B011A7760ED00FB9C08 /* FMDatabaseAdditions.m */,
+				B1801B021A7760ED00FB9C08 /* FMDatabasePool.h */,
+				B1801B031A7760ED00FB9C08 /* FMDatabasePool.m */,
+				B1801B041A7760ED00FB9C08 /* FMDatabaseQueue.h */,
+				B1801B051A7760ED00FB9C08 /* FMDatabaseQueue.m */,
+				B1801B061A7760ED00FB9C08 /* FMDB.h */,
+				B1801B071A7760ED00FB9C08 /* FMResultSet.h */,
+				B1801B081A7760ED00FB9C08 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1801AC91A775EA100FB9C08 /* FKFMDBDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1801AED1A775EA500FB9C08 /* Build configuration list for PBXNativeTarget "FKFMDBDemo" */;
+			buildPhases = (
+				B1801AC61A775EA100FB9C08 /* Sources */,
+				B1801AC71A775EA100FB9C08 /* Frameworks */,
+				B1801AC81A775EA100FB9C08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FKFMDBDemo;
+			productName = FKFMDBDemo;
+			productReference = B1801ACA1A775EA100FB9C08 /* FKFMDBDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1801AE21A775EA500FB9C08 /* FKFMDBDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1801AF01A775EA500FB9C08 /* Build configuration list for PBXNativeTarget "FKFMDBDemoTests" */;
+			buildPhases = (
+				B1801ADF1A775EA500FB9C08 /* Sources */,
+				B1801AE01A775EA500FB9C08 /* Frameworks */,
+				B1801AE11A775EA500FB9C08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1801AE51A775EA500FB9C08 /* PBXTargetDependency */,
+			);
+			name = FKFMDBDemoTests;
+			productName = FKFMDBDemoTests;
+			productReference = B1801AE31A775EA500FB9C08 /* FKFMDBDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1801AC21A775EA000FB9C08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ouok;
+				TargetAttributes = {
+					B1801AC91A775EA100FB9C08 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					B1801AE21A775EA500FB9C08 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = B1801AC91A775EA100FB9C08;
+					};
+				};
+			};
+			buildConfigurationList = B1801AC51A775EA000FB9C08 /* Build configuration list for PBXProject "FKFMDBDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1801AC11A775E9F00FB9C08;
+			productRefGroup = B1801ACB1A775EA100FB9C08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1801AC91A775EA100FB9C08 /* FKFMDBDemo */,
+				B1801AE21A775EA500FB9C08 /* FKFMDBDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1801AC81A775EA100FB9C08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1801AD91A775EA300FB9C08 /* Main.storyboard in Resources */,
+				B1801ADE1A775EA400FB9C08 /* LaunchScreen.xib in Resources */,
+				B1801ADB1A775EA400FB9C08 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1801AE11A775EA500FB9C08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1801AC61A775EA100FB9C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1801AD61A775EA200FB9C08 /* ViewController.m in Sources */,
+				B1801AD31A775EA200FB9C08 /* AppDelegate.m in Sources */,
+				B1801AFA1A775ED900FB9C08 /* FKFMDatabase.m in Sources */,
+				B1801B091A7760ED00FB9C08 /* FMDatabase.m in Sources */,
+				B1801B0B1A7760ED00FB9C08 /* FMDatabasePool.m in Sources */,
+				B1801B0C1A7760ED00FB9C08 /* FMDatabaseQueue.m in Sources */,
+				B1801AD01A775EA200FB9C08 /* main.m in Sources */,
+				B1801AFB1A775ED900FB9C08 /* FKFMDBColumn.m in Sources */,
+				B1801B0D1A7760ED00FB9C08 /* FMResultSet.m in Sources */,
+				B1801AFC1A775ED900FB9C08 /* FKFMDBCondition.m in Sources */,
+				B1801B0A1A7760ED00FB9C08 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1801ADF1A775EA500FB9C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1801AEA1A775EA500FB9C08 /* FKFMDBDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1801AE51A775EA500FB9C08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1801AC91A775EA100FB9C08 /* FKFMDBDemo */;
+			targetProxy = B1801AE41A775EA500FB9C08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1801AD71A775EA300FB9C08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1801AD81A775EA300FB9C08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B1801ADC1A775EA400FB9C08 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1801ADD1A775EA400FB9C08 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1801AEB1A775EA500FB9C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1801AEC1A775EA500FB9C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1801AEE1A775EA500FB9C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FKFMDBDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B1801AEF1A775EA500FB9C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FKFMDBDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B1801AF11A775EA500FB9C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FKFMDBDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FKFMDBDemo.app/FKFMDBDemo";
+			};
+			name = Debug;
+		};
+		B1801AF21A775EA500FB9C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FKFMDBDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FKFMDBDemo.app/FKFMDBDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1801AC51A775EA000FB9C08 /* Build configuration list for PBXProject "FKFMDBDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1801AEB1A775EA500FB9C08 /* Debug */,
+				B1801AEC1A775EA500FB9C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1801AED1A775EA500FB9C08 /* Build configuration list for PBXNativeTarget "FKFMDBDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1801AEE1A775EA500FB9C08 /* Debug */,
+				B1801AEF1A775EA500FB9C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B1801AF01A775EA500FB9C08 /* Build configuration list for PBXNativeTarget "FKFMDBDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1801AF11A775EA500FB9C08 /* Debug */,
+				B1801AF21A775EA500FB9C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1801AC21A775EA000FB9C08 /* Project object */;
+}
