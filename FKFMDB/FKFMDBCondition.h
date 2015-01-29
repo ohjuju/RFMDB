@@ -8,18 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-
-//typedef enum
-//{   count,
-//    sum,
-//    avg,
-//    max,
-//    min
-//}selectQuery;
-
 @interface FKFMDBCondition : NSObject
 
-/*like glob*/
+/*
+ [self WHERE:_whereCondition GROUPBY:_groupbyCondition HAVING:_havingCondition ORDERBY:_orderbyCondition LIMIT:_limit OFFSET:_offset]
+ */
 @property (nonatomic, copy) NSString *whereCondition;
 @property (nonatomic, copy) NSArray *andCondition;
 @property (nonatomic, copy) NSArray *orCondition;
@@ -36,7 +29,9 @@
 + (NSString *)AVG:(NSString *)columnName;
 + (NSString *)MAX:(NSString *)columnName;
 + (NSString *)MIN:(NSString *)columnName;
+/*like*/
 + (NSString *)COLUMN:(NSString *)columnName LIKE:(NSString *)value;
+/*glob*/
 + (NSString *)COLUMN:(NSString *)columnName GLOB:(NSString *)value;
 
 @end

@@ -25,7 +25,7 @@
 
 - (NSString *)buidColumn
 {
-    return [self setColumntoString:[self setNewColumnName:_columnName Type:_type isPrinmaryKey:_primary Length:_length canNull:_canNULL defaultValue:_defaultValue isUnique:_unique checkCondition:_checkCondition isFroeignKey:_keyfromOtherTable]];
+    return [self setColumntoString:[self setNewColumnName:_columnName Type:_type isPrinmaryKey:_primary Length:_length canNull:_canNULL defaultValue:_defaultValue isUnique:_unique checkCondition:_checkCondition isFroeignKey:_foreignKeyCondition]];
 }
 
 - (NSString *)getTypebyDatabaseType:(databaseType)isType
@@ -127,6 +127,11 @@
     //combine all values
     NSString *columnString = [NSString stringWithFormat: @"%@%@%@%@%@%@%@%@",columnName,columnType,columnPrimary,columnNull,columnDefault,columnUnique,columnCheck,columnForeign];
     return columnString;
+}
+
++ (NSString *)REFERENCESKEY:(NSString *)column FROMTABLE:(NSString *)tableName
+{
+    return [NSString stringWithFormat:@"%@(%@)",tableName,column];
 }
 
 @end

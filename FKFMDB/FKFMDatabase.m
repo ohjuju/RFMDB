@@ -55,24 +55,26 @@
 }
 
 #pragma mark - baseFunction
--(void)open
+-(BOOL)open
 {
     BOOL rec=[_database open];
     if (!rec) {
         NSLog(@"open database failed");
     }
+    return rec;
 }
--(void)close
+-(BOOL)close
 {
     BOOL rec=[_database close];
     if (!rec) {
         NSLog(@"close database failed");
     }
+    return rec;
 }
 
--(void)executeUpdate:(NSString *)sql
+-(BOOL)executeUpdate:(NSString *)sql
 {
-    [_database executeUpdate:sql];
+    return [_database executeUpdate:sql];
 }
 
 -(FMResultSet *)executeQuery:(NSString *)sql
@@ -90,7 +92,12 @@
     return [_database commit];
 }
 
-- (void)insertDataWithColum:(NSDictionary *)dic intoTable:(NSString *)tableName
+- (BOOL)rollBack
+{
+    return [_database rollback];
+}
+
+- (BOOL)insertDataWithColum:(NSDictionary *)dic intoTable:(NSString *)tableName
 {
     NSString * columnNames = [dic.allKeys componentsJoinedByString:@", "];
     
@@ -109,9 +116,10 @@
         perror([sql UTF8String]);
 //        [_database rollback];
     }
+    return rec;
 }
 
-- (void)deleteDataWithCondition:(NSString *)condition fromTable:(NSString *)tableName
+- (BOOL)deleteDataWithCondition:(NSString *)condition fromTable:(NSString *)tableName
 {
     NSString * sql = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
     if (condition!=nil) {
@@ -125,9 +133,10 @@
         perror([sql UTF8String]);
         //        [_database rollback];
     }
+    return rec;
 }
 
-- (void)updateDataWithColumns:(NSDictionary *)dic condition:(NSString *)condition toTable:(NSString *)tableName
+- (BOOL)updateDataWithColumns:(NSDictionary *)dic condition:(NSString *)condition toTable:(NSString *)tableName
 {
     NSString * sql = [NSString stringWithFormat:@"UPDATE %@ SET ", tableName];
     NSMutableArray * questionMarkArray = [NSMutableArray array];
@@ -145,6 +154,7 @@
         perror([sql UTF8String]);
 //        [_database rollback];
     }
+    return rec;
 }
 
 - (FMResultSet *)queryDataWithColumns:(NSArray *)names condition:(NSString *)condition fromTable:(NSString *)tableName
@@ -173,7 +183,7 @@
 }
 
 #pragma mark - second stage
-- (void)createTable:(NSString *)tableName columnAndTypeStringArray:(NSArray *)columnAndTypeStringArray
+- (BOOL)createTable:(NSString *)tableName columnAndTypeStringArray:(NSArray *)columnAndTypeStringArray
 {
     NSString *createCondition;
     if (columnAndTypeStringArray.count >1) {
@@ -189,9 +199,10 @@
     if (!rec) {
         perror([sql UTF8String]);
     }
+    return rec;
 }
 
-- (void)insertDataWithColumDicArray:(NSArray *)columnAndDataDicArray intoTable:(NSString *)tableName
+- (BOOL)insertDataWithColumDicArray:(NSArray *)columnAndDataDicArray intoTable:(NSString *)tableName
 {
     [_database beginTransaction];
     for (int i=0; i<columnAndDataDicArray.count; i++) {
@@ -211,12 +222,13 @@
         if (!rec) {
             perror([sql UTF8String]);
 //            [_database rollback];
+            return NO;
         }
     }
     [_database commit];
-    
+    return YES;
 }
-- (void)updateDataWithColumDicArray:(NSArray *)columnAndDataDicArray condition:(NSString *)condition toTable:(NSString *)tableName
+- (BOOL)updateDataWithColumDicArray:(NSArray *)columnAndDataDicArray condition:(NSString *)condition toTable:(NSString *)tableName
 {
     [_database beginTransaction];
     for (int i=0; i<columnAndDataDicArray.count; i++) {
@@ -236,9 +248,11 @@
         if (!rec) {
             perror([sql UTF8String]);
 //            [_database rollback];
+            return NO;
         }
     }
     [_database commit];
+    return YES;
 }
 
 - (NSArray *)querytheDatatoArrayWithColumns:(NSArray *)names condition:(NSString *)condition fromTable:(NSString *)tableName
@@ -276,7 +290,7 @@
     return [NSString stringWithFormat:@"%@",[self querytheDatatoArrayWithColumns:names condition:condition fromTable:tableName]];
 }
 
-- (void)addColumntoTable:(NSString *)tableName columnNameAndTypeArray:(NSArray *)columnNameAndTypeArray
+- (BOOL)addColumntoTable:(NSString *)tableName columnNameAndTypeArray:(NSArray *)columnNameAndTypeArray
 {
     [_database beginTransaction];
     for (int i=0; i<columnNameAndTypeArray.count; i++) {
@@ -285,9 +299,11 @@
         BOOL rec = [_database executeUpdate:sql];
         if (!rec) {
             perror([sql UTF8String]);
+            return NO;
         }
     }
     [_database commit];
+    return YES;
 }
 
 #pragma mark - count,sum,avg,min,max
